@@ -18,16 +18,13 @@ function handleProximity(e) {
 	console.log("proximity: " + e.proximity);
 }
 
-
 function addListeners() {
-
 	TiBeacons.addEventListener("enteredRegion", enterRegion);
 	TiBeacons.addEventListener("exitedRegion", exitRegion);
 
 	TiBeacons.addEventListener("beaconRanges", updateRanges);
 	TiBeacons.addEventListener("beaconProximity", handleProximity);	
 }
-
 
 function removeListeners() {
 	
