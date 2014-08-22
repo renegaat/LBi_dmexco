@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+description: BeaconLocator
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2014 by Your Company
+
+# these should not be edited
+name: BeaconLocator
+moduleid: de.lbi.beaconLocator
+guid: ea0a9a74-a4d5-4b74-aea0-cc5ba3dc0fee
+platform: iphone
+minsdk: 3.3.0.GA

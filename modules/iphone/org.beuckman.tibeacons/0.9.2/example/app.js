@@ -12,12 +12,11 @@ function exitRegion(e) {
 function updateRanges(e) {
 	Ti.API.info(e);
 }
-
 function handleProximity(e) {
 	Ti.API.info(e);
+	
 	console.log("proximity: " + e.proximity);
 }
-
 
 function addListeners() {
 
@@ -25,10 +24,9 @@ function addListeners() {
 	TiBeacons.addEventListener("exitedRegion", exitRegion);
 
 	TiBeacons.addEventListener("beaconRanges", updateRanges);
-	TiBeacons.addEventListener("beaconProximity", handleProximity);	
+	TiBeacons.addEventListener("beaconProximity", handleProximity);
+	
 }
-
-
 function removeListeners() {
 	
 	TiBeacons.removeEventListener("enteredRegion", enterRegion);
@@ -52,9 +50,27 @@ Ti.App.addEventListener("resumed", appResumed);
 
 addListeners();
 
+
+
 function toggleMonitoring(monitor) {
 
     if (monitor) {
+        TiBeacons.startMonitoringForRegion({
+            uuid : "00000000-0000-0000-0000-000000000000",
+            identifier : "Test Region 1"
+        });
+        TiBeacons.startMonitoringForRegion({
+            uuid : "00000000-0000-0000-0000-000000000001",
+            major: 1,
+            identifier : "Test Region 2"
+        });
+        TiBeacons.startMonitoringForRegion({
+            uuid : "00000000-0000-0000-0000-000000000002",
+            major: 1,
+            minor: 2,
+            identifier : "Test Region 3"
+        });
+
         TiBeacons.startMonitoringForRegion({
             uuid : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
             identifier : "Estimote"

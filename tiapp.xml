@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>joross</publisher>
     <url>http://www.lbi.com</url>
-    <description/>
+    <description>undefined</description>
     <copyright>2014 by joross</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -48,7 +48,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="iphone">org.beuckman.tibeacons</module>
+        <module platform="iphone">de.lbi.beaconlocator</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
