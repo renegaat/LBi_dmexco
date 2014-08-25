@@ -1,5 +1,38 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+	
+	<Collection src="iBeacon"/>
+	
+	<Window id="win">
+
+		<View class="container">
+		
+			<View id="advertisingSection">		
+				<View class="fieldContainer" height="45">
+					<Label>region:</Label>
+					<TextField id="uuid" left="10" value="00000000-0000-0000-0000-000000000000"></TextField>
+				</View>
+				<View class="fieldContainer">
+					<Label>major:</Label>
+					<TextField id="major" value="1"></TextField>
+				</View>
+				<View class="fieldContainer">
+					<Label>minor:</Label>
+					<TextField id="minor" value="2"></TextField>
+				</View>
+			</View>
+			
+			<View layout="horizontal" height="35">
+				<Label>Monitoring</Label>
+				<Switch id="monitoringSwitch" value="false" onChange="toggleMonitoring"/>
+			</View>
+		
+			<TableView dataCollection="iBeacon">
+				
+				<Require src="beaconRow"/>
+			
+			</TableView>
+		
+		</View>
+
 	</Window>
 </Alloy>

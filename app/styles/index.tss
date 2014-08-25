@@ -1,14 +1,44 @@
+
 ".container": {
-	backgroundColor:"white"
-},
+	backgroundColor:"white",
+	layout: "vertical"
+}
+
+"#advertisingSection": {
+	top: 30,
+	height: Ti.UI.SIZE,
+	backgroundColor: "rgba(0,0,0,.1)",
+	layout: "vertical",
+	
+}
+
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	color: "#000"
-} 
+	color: "#000",
+	left: 5,
+	right: 5
+}
+"TextField": {
+	width: 100,
+	borderWidth: 1,
+	borderColor: "#999"
+}
 
-"#label": {
+"#trace": {
+	width: 320,
+	height: 400,
+	layout: "vertical"
+}
+"#uuid": {
+	width: 300,
 	font: {
-		fontSize: 12
+		fontSize: 14
 	}
 }
+
+".fieldContainer": {
+	layout: "horizontal",
+	height: 32
+}
+
