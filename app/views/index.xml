@@ -5,7 +5,6 @@
 	<Window id="win">
 
 		<View class="container">
-		
 			<View id="advertisingSection">		
 				<View class="fieldContainer" height="45">
 					<Label>region:</Label>
@@ -21,15 +20,8 @@
 				</View>
 			</View>
 			
-			<View layout="horizontal" height="35">
-				<Label>Monitoring</Label>
-				<Switch id="monitoringSwitch" value="false" onChange="toggleMonitoring"/>
-			</View>
-		
-			<TableView dataCollection="iBeacon">
-				
+			<TableView dataCollection="iBeacon">	
 				<Require src="beaconRow"/>
-			
 			</TableView>
 		
 		</View>
